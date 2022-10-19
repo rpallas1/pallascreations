@@ -1,7 +1,17 @@
 /* variables */
-/* :root {
+:root {
+    /* --- COLORS --- */
+    --background-color: #f5f4f6;
+    --accent-color: #F24F55;
+    --secondary-color: #233855;
+    --darker-secondary-color: #152132;
+    --pale-pink: #daa4a0;
+    --burnt-orange: #D58A5A;
+    --darker-burnt-orange: #ac6f49;
+    --text-color-dark: #222;
 
-} */
+    --top-bottom-margin: 20px auto;
+}
 
 html {
     width: 100%;
@@ -19,12 +29,16 @@ body {
     display: grid;
     grid-gap: 10px;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    background-color: var(--darker-secondary-color);
+    color: var(--text-color-dark);
 }
 
 /* --- HEADER --- */
+/* --- ALL PAGES --- */
 header, footer {
     display: grid;
-    background-color: #eee;
+    background-color: var(--background-color);
     height: 10vh;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
@@ -36,47 +50,58 @@ h1, footer h2 {
     justify-content: start;
     text-align: center;
     margin: 0;
-    margin-left: 5px;
+    font-size: 35px;
+    margin-left: 30px;
 }
 
-nav {
+nav, footer nav {
     display: grid;
     margin-right: 5px;
     justify-content: end;
 }
 
-nav ul {
+nav ul, footer nav ul {
     margin: 0;
     padding: 0;
 }
 
-nav li {
+nav li, footer nav li {
     display: inline-block;
     list-style: none;
-    background-color: #222;
-    padding: 5px;
     margin: 0 2px 0 2px;
 }
 
-nav a {
+nav a, footer nav a {
     text-decoration: none;
     color: white;
+    padding: 15px;
+    border: 1.5px solid var(--accent-color);
+    background-color: var(--darker-secondary-color);
+    border-radius: 4px;
+    transition-duration: 0.2s;
 }
+
+nav a:hover, footer nav a:hover {
+    background-color: var(--accent-color);
+    color: var(--darker-secondary-color);
+    border: 1.5px solid var(--darker-secondary-color);
+}
+
+/* --------- START HOME PAGE --------- */
 
 /* --- MAIN --- */
 main {
     display: grid;
-    background-color: #eee;
+    grid-gap: 10px;
 }
 
-main section {
-    margin: 10px;
-    background-color: #999;
+#welcome {
+    background-color: var(--background-color);
 }
 
 #welcome h2 {
     text-align: center;
-    margin-bottom: 15px;
+    margin: var(--top-bottom-margin);
 }
 
 #welcome p {
@@ -84,25 +109,42 @@ main section {
     column-count: 2;
     column-gap: 9vw;
     column-span: all;
-    margin: 0 auto;
+    margin: var(--top-bottom-margin);
     line-height: 1.5;
+}
+
+#welcome p > a {
+    color: var(--darker-burnt-orange);
+}
+
+#welcome p > a:hover {
+    color: var(--burnt-orange);
 }
 
 #preview {
     display: grid;
     grid-template: 3 / 2;
-    background-color: #bbb;
+    background-color: var(--background-color);
 }
 
 #preview h2 {
     grid-column: 1 / 3;
-    margin: 5px auto;
+    margin: var(--top-bottom-margin);
+
 }
 
 #preview p {
     grid-area: 2 / 1 / 3 / 3;
     max-width: 75ch;
-    margin: 15px auto;
+    margin: var(--top-bottom-margin);
+}
+
+#preview p > a {
+    color: var(--darker-burnt-orange);
+}
+
+#preview p > a:hover {
+    color: var(--burnt-orange);
 }
 
 #preview > section {
@@ -110,48 +152,79 @@ main section {
     grid-area: 3 / 1 / 4 / 3;
     grid-template: 1fr / 1fr 1fr;
     justify-items: center;
-    background-color: #222;
-    padding: 10px 0;
+    align-items: end;
+    background-color: var(--background-color);
+    padding: 10px;
+    background-size: contain;
 }
 
 #preview > section a {
-    color: white;
+    color: var(--text-color-dark);
+    padding: 0 20px;
+    text-align: center;
 }
 
 #preview > section img {
     display: block;
     margin: 0 auto;
-    width: 100px;
-    height: 150px;
+    width: 70%;
+    height: auto;
 }
 
 #quotes {
     display: grid;
     grid-template-rows: 3;
+    background-color: var(--background-color);
 }
 
 #quotes h2 {
     text-align: center;
-    margin: 5px 0;
+    margin: var(--top-bottom-margin);
 }
 
 #quotes p {
     text-align: center;
-    margin: 5px 0;
+    margin: var(--top-bottom-margin);
 }
 
 #quotes ul {
     text-align: center;
-    margin: 5px 0;
+    padding: 0;
+    margin: var(--top-bottom-margin);
 }
 
 #quotes li {
     display: inline-block;
     margin: 0 25px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 4px;
+
 }
+/* --------- END HOME PAGE --------- */
+
+
+/* --------- START GALLERY PAGE --------- */
+
+
+/* --------- END GALLERY PAGE --------- */
+
+
+/* --------- START ABOUT PAGE --------- */
+
+
+/* --------- END ABOUT PAGE --------- */
+
+
+/* --------- START CONTACT PAGE --------- */
+
+
+/* --------- END CONTACT PAGE --------- */
 
 /* --- FOOTER --- */
+/* --- ALL PAGES --- */
 footer {
-    background-color: #eee;
+    background-color: var(--background-color);
 }
 
