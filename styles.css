@@ -95,16 +95,16 @@ main {
     grid-gap: 10px;
 }
 
-#welcome {
+.welcome {
     background-color: var(--background-color);
 }
 
-#welcome h2 {
+.welcome h2 {
     text-align: center;
     margin: var(--top-bottom-margin);
 }
 
-#welcome p {
+.welcome p {
     max-width: 75ch;
     column-count: 2;
     column-gap: 9vw;
@@ -113,11 +113,11 @@ main {
     line-height: 1.5;
 }
 
-#welcome p > a {
+.welcome p > a {
     color: var(--darker-burnt-orange);
 }
 
-#welcome p > a:hover {
+.welcome p > a:hover {
     color: var(--burnt-orange);
 }
 
@@ -206,6 +206,33 @@ main {
 
 
 /* --------- START GALLERY PAGE --------- */
+.gallery-welcome p {
+    column-count: 1;
+}
+
+.main-gallery  {
+    display: grid;
+    grid-template: repeat(7, 1fr) / 1fr 1fr;
+    background-color: var(--background-color);
+    padding: 10px;
+    background-size: contain;
+    justify-items: center;
+}
+
+.main-gallery img {
+    display: grid;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.main-gallery a {
+    color: var(--text-color-dark);
+    margin: 0 20px;
+    text-align: center;
+    display: block;
+    margin-bottom: 100px;
+}
 
 
 /* --------- END GALLERY PAGE --------- */
